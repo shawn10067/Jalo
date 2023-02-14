@@ -1,4 +1,4 @@
-// the 'gamily' method has the following input and output:
+// the 'gamify' method has the following input and output:
 /* Input:   [
     'Mon 02.13\n9:00.PM.ET',
     'Texas\n@ Texas Tech',
@@ -58,13 +58,7 @@ const customParseFormat = require("dayjs/plugin/customParseFormat");
 dayjs.extend(customParseFormat);
 
 // if the input is an empty array, return null
-export const gamify = ({
-  arr,
-  sport = "ncaab",
-}: {
-  sport: "ncaab" | "nba";
-  arr: GameArray;
-}): Game | null => {
+export const gamify = (arr: GameArray): Game | null => {
   if (arr.length <= 8) {
     return null;
   }
@@ -77,8 +71,6 @@ export const gamify = ({
   ) {
     return null;
   }
-
-  console.log(arr);
 
   const gameTime = arr[0].split("\n")[1];
   const isFinal = gameTime === "FINAL";

@@ -22,7 +22,7 @@ export const sports = {
   },
   nba: {
     getGames: (): Promise<Game[]> => {
-      return getGenericMassey("https://masseyratings.com/cb/nba/games");
+      return getGenericMassey("https://masseyratings.com/nba/games");
     },
     getOdds: async (apiKey: string) => {
       const oddsAPI = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?apiKey=${apiKey}&regions=us&markets=spreads&bookmakers=fanduel,pinnacle,draftkings,betmgm`;
