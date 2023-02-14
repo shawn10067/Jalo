@@ -73,14 +73,14 @@ export const gamify = (arr: GameArray): Game | null => {
   }
 
   const gameTime = arr[0].split("\n")[1];
+  const gameDay = arr[0].split("\n")[0].split(" ")[1].trim().split(".")[1];
   const isFinal = gameTime === "FINAL";
 
   const currentTime = new Date();
   const currentYear = currentTime.getFullYear();
   const currentMonth = currentTime.getMonth();
-  const currentDay = currentTime.getDate();
 
-  const convertedTime = `${currentYear}-${currentMonth + 1}-${currentDay}${
+  const convertedTime = `${currentYear}-${currentMonth + 1}-${gameDay}${
     gameTime.split(".")[0]
   }${gameTime.split(".")[1]}`;
 

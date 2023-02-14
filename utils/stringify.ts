@@ -1,5 +1,6 @@
 import chalk = require("chalk");
 import { GameWithOdds } from "./compare";
+import dayjs = require("dayjs");
 
 export const stringify = (game: GameWithOdds[]): string[] => {
   // array of strings to return
@@ -10,8 +11,8 @@ export const stringify = (game: GameWithOdds[]): string[] => {
   game.forEach((game) => {
     const gameString = `${chalk.greenBright(game.home)} vs ${chalk.redBright(
       game.away
-    )} at ${chalk.yellowBright(
-      game.dateString
+    )} at ${dayjs(game.date).format(
+      "h:mm A"
     )}, with a spread of ${chalk.cyanBright(game.spread)}`;
     const bookmakerStrings: string[] = [];
     game.bookmakers.forEach((bookmaker) => {
@@ -28,13 +29,15 @@ export const stringify = (game: GameWithOdds[]): string[] => {
           : bookmaker.homePrice;
 
       // format the string
-      const bookmakerString = `\t${chalk.blue(
+      const bookmakerString = `\t${
         bookmaker.bookmaker
-      )} has ${chalk.magentaBright(negativeTeamPrice)} for ${
+      } has ${chalk.magentaBright(negativeTeamPrice)} for ${
         negativeTeam === game.home
           ? chalk.green(negativeTeam)
           : chalk.red(negativeTeam)
-      } at ${chalk.cyan(negativeSpread)}`;
+      } at ${negativeSpread} (diff: ${chalk.cyanBright(
+        Math.abs(negativeSpread - game.spread)
+      )})`;
       bookmakerStrings.push(bookmakerString);
     });
     // join the bookmaker strings with a new line

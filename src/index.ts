@@ -4,6 +4,8 @@ import { Game, GameArray } from "../utils/game";
 import { GameWithOdds, findClosestMatch, getBestGames } from "../utils/compare";
 import { sports } from "./sports";
 import { stringify } from "../utils/stringify";
+import { getGenericTheOdds } from "../utils/genericTheOdds";
+import { getGenericMassey } from "../utils/genericMassey";
 const chalk = require("chalk");
 
 // config imports
@@ -58,13 +60,16 @@ const sportsOptionsSettings: {
 const crunchSports = async () => {
   for (const sport in sportsOptionsSettings) {
     if (sportsOptionsSettings[sport].enabled) {
-      const gamesLeft: Game[] = await sports[sport].getGames();
-      const books: BookArray = await sports[sport].getOdds(apiKey);
+      const gamesToday = await getGenericMassey(sports[sport].gamesLink);
+      const oddsToday = await getGenericTheOdds(
+        sports[sport].oddsSportID,
+        apiKey
+      );
 
       // for each game, find the closest match in the bookmakers array
       const matchedGames: GameWithOdds[] = [];
-      gamesLeft.forEach((game) => {
-        const matchedGame = findClosestMatch(game, books);
+      gamesToday.forEach((game) => {
+        const matchedGame = findClosestMatch(game, oddsToday);
         if (matchedGame) {
           matchedGames.push(matchedGame);
         }
@@ -76,6 +81,11 @@ const crunchSports = async () => {
         sportsOptionsSettings[sport].sport
       );
       const bestGamesStrings = stringify(bestGames);
+
+      // if there are no games, continue to the next sport
+      if (bestGamesStrings.length === 0) {
+        continue;
+      }
 
       // print the stringified games to the console, with the number of games at the top
       console.log(

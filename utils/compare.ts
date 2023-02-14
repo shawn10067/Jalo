@@ -76,24 +76,47 @@ export const getBestGames = (
     return game;
   });
 
-  let spreadThreasold = 0;
+  let SPREAD_ABS_THRESHOLD = 0;
   switch (sport) {
     case "basketball":
-      spreadThreasold = 7;
+      SPREAD_ABS_THRESHOLD = 7;
       break;
     case "soccer":
-      spreadThreasold = 0.5;
+      SPREAD_ABS_THRESHOLD = 0.5;
       break;
   }
 
-  // return the games where there exists at least one bookmaker with a negative spread greater than the actual spread, and the absolute value of the negative spread is greater than 8
-  return games.filter(
-    (game) =>
-      game.bookmakers.length > 0 && Math.abs(game.spread) > spreadThreasold
-  );
+  /* 
+    return the games where there exists at least one bookmaker with a negative spread greater than the actual spread, 
+    the absolute value of the negative spread is greater than 8, 
+    and there is a difference between any bookmaker's negative spread and the actual spread is greater than SPREAD_DIFFERENCE_THRESHOLD 
+  */
+  return games.filter((game) => {
+    const SPREAD_DIFFERENCE_THRESHOLD = 0.5;
+    // game.bookmakers.length > 0 &&
+    // Math.abs(game.spread) > spreadThreasold &&
+    // Math.abs(game.spread) - Math.abs(game.bookmakers[0].homeSpread) > 0.5
+    const bookmakerSpreads = game.bookmakers.filter((bookmaker) => {
+      const negativeSpread =
+        bookmaker.homeSpread > bookmaker.awaySpread
+          ? bookmaker.awaySpread
+          : bookmaker.homeSpread;
+
+      // ensure that the difference between the bookmaker's negative spread and the actual spread is greater than 0.5
+      return (
+        Math.abs(game.spread) - Math.abs(negativeSpread) >
+        SPREAD_DIFFERENCE_THRESHOLD
+      );
+    });
+
+    return (
+      game.bookmakers.length > 0 &&
+      Math.abs(game.spread) > SPREAD_ABS_THRESHOLD &&
+      bookmakerSpreads.length > 0
+    );
+  });
 };
 
 // test it with the demoGameArray
 // console.dir(demoGameArray, { depth: null });
-// console.log("*****************************");
 // console.dir(getBestGames(demoGameArray), { depth: null });
