@@ -58,7 +58,13 @@ const customParseFormat = require("dayjs/plugin/customParseFormat");
 dayjs.extend(customParseFormat);
 
 // if the input is an empty array, return null
-const gamify = (arr: GameArray): Game | null => {
+export const gamify = ({
+  arr,
+  sport = "ncaab",
+}: {
+  sport: "ncaab" | "nba";
+  arr: GameArray;
+}): Game | null => {
   if (arr.length <= 8) {
     return null;
   }
@@ -71,6 +77,8 @@ const gamify = (arr: GameArray): Game | null => {
   ) {
     return null;
   }
+
+  console.log(arr);
 
   const gameTime = arr[0].split("\n")[1];
   const isFinal = gameTime === "FINAL";

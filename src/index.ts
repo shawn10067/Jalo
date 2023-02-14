@@ -4,6 +4,7 @@ import { bookify } from "../utils/book";
 import { Game, GameArray } from "../utils/game";
 const { gamify } = require("../utils/game");
 import { GameWithOdds, findClosestMatch, getBestGames } from "../utils/compare";
+import { sports } from "./sports";
 const chalk = require("chalk");
 
 // api imports
@@ -17,50 +18,12 @@ require("dotenv").config();
 const apiKey = process.env.API_KEY;
 
 (async () => {
-  // puppeteer setup
-  const browser = await puppeteer.launch({
-    executablePath: "/Applications/Chromium.app/Contents/MacOS/Chromium",
-    headless: true,
-  });
-  const page = await browser.newPage();
-
-  // scrape masseyratings.com
-  const todayGamesURL = "https://masseyratings.com/cb/ncaa-d1/games";
-  await page.goto(todayGamesURL);
-
-  // get the table
-  const tableWithId = await page.$("#mytable0");
-  const allRowsFromTableWithId = await page.evaluate(() => {
-    const rows = document.querySelectorAll("#mytable0 tr");
-    return Array.from(rows, (row) => {
-      const columns: NodeListOf<HTMLElement> = row.querySelectorAll("td");
-      return Array.from(columns, (column: HTMLElement) => column.innerText);
-    });
-  });
-
-  // filter out the header row and get the games that are today and are not final
-  const gamesToday: Game[] = [];
-  allRowsFromTableWithId.forEach((row: GameArray) => {
-    const game = gamify(row);
-    if (game) {
-      gamesToday.push(game);
-    }
-  });
-  const gamesLeft = gamesToday.filter((game) => game.dateString !== "FINAL");
-
-  // get the bookmaker odds
-  const oddsAPI = `https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds/?apiKey=${apiKey}&regions=us&markets=spreads&bookmakers=fanduel,pinnacle,draftkings,betmgm`;
-  const resp = await axios.get(oddsAPI);
-
-  const books: BookArray = [];
-  resp.data.forEach((book: BookInput) => {
-    const bookObject: Book = bookify(book);
-    books.push(bookObject);
-  });
+  const gamesLeftNcaab: Game[] = await sports.nba.getGames();
+  const booksNcaab: BookArray = await sports.nba.getOdds(process.env.API_KEY);
 
   const matchedGames: GameWithOdds[] = [];
-  gamesLeft.forEach((game) => {
-    const matchedGame = findClosestMatch(game, books);
+  gamesLeftNcaab.forEach((game) => {
+    const matchedGame = findClosestMatch(game, booksNcaab);
     if (matchedGame) {
       matchedGames.push(matchedGame);
     }
@@ -110,6 +73,4 @@ const apiKey = process.env.API_KEY;
     console.log("*******************************");
     console.log(game);
   });
-
-  await browser.close();
 })();
