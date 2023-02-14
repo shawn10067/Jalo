@@ -70,11 +70,11 @@ const apiKey = process.env.API_KEY;
   // format each game into a legible and pretty string, using chalk. Inlucde each bookmaker price and their negative spread. Also include the actual spread and game time and teams.
   const bestGamesStrings: string[] = [];
   getBestGames(matchedGames).forEach((game) => {
-    const gameString = `${chalk.green(game.home)} vs ${chalk.red(
+    const gameString = `${chalk.greenBright(game.home)} vs ${chalk.redBright(
       game.away
-    )} at ${chalk.yellow(game.dateString)}, with a spread of ${chalk.cyan(
-      game.spread
-    )}`;
+    )} at ${chalk.yellowBright(
+      game.dateString
+    )}, with a spread of ${chalk.cyanBright(game.spread)}`;
     const bookmakerStrings: string[] = [];
     game.bookmakers.forEach((bookmaker) => {
       // get the negative spread, team, and price
@@ -92,11 +92,11 @@ const apiKey = process.env.API_KEY;
       // format the string
       const bookmakerString = `${chalk.blue(
         bookmaker.bookmaker
-      )} has ${chalk.whiteBright(negativeTeamPrice)} for ${
+      )} has ${chalk.magentaBright(negativeTeamPrice)} for ${
         negativeTeam === game.home
-          ? chalk.greenBright(negativeTeam)
-          : chalk.redBright(negativeTeam)
-      } at ${chalk.cyanBright(negativeSpread)}`;
+          ? chalk.green(negativeTeam)
+          : chalk.red(negativeTeam)
+      } at ${chalk.cyan(negativeSpread)}`;
       bookmakerStrings.push(bookmakerString);
     });
     const bookmakerStringsJoinedByNewLine = bookmakerStrings.join("\n");
@@ -110,7 +110,6 @@ const apiKey = process.env.API_KEY;
   bestGamesStrings.forEach((game) => {
     console.log("*******************************");
     console.log(game);
-    console.log("*******************************");
   });
 
   await browser.close();
