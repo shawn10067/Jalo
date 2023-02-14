@@ -70,7 +70,6 @@ const apiKey = process.env.API_KEY;
   // format each game into a legible and pretty string, using chalk. Inlucde each bookmaker price and their negative spread. Also include the actual spread and game time and teams.
   const bestGamesStrings: string[] = [];
   getBestGames(matchedGames).forEach((game) => {
-    console.log(game);
     const gameString = `${chalk.green(game.home)} vs ${chalk.red(
       game.away
     )} at ${chalk.yellow(game.dateString)}, with a spread of ${chalk.cyan(
