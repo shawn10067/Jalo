@@ -1,3 +1,4 @@
+import { sportTypes } from "../src";
 import { Book, BookArray, demoBookArray } from "./book";
 import type { Game } from "./game";
 
@@ -20,6 +21,14 @@ export const findClosestMatch = (
   game: Game,
   books: BookArray
 ): GameWithOdds => {
+  // if there is no bookmaker data for the game, return the game without the bookmaker data
+  if (books === undefined || books === null || books.length === 0) {
+    return {
+      ...game,
+      bookmakers: [],
+    };
+  }
+
   // find the closest match for the game in the books array
   const closestMatch = stringSimilarity.findBestMatch(
     game.home + " vs " + game.away,
@@ -50,7 +59,8 @@ export const demoGameArray: Array<GameWithOdds> = games.map((game: Game) => {
 // we will filter out the games where the bookmaker negative spread is greater (in magnitude) than the actual spread
 
 export const getBestGames = (
-  games: Array<GameWithOdds>
+  games: Array<GameWithOdds>,
+  sport: sportTypes
 ): Array<GameWithOdds> => {
   games.map((game) => {
     // filter the games where the bookmaker's negative spread is greater (in magnitude) than the actual spread
@@ -66,9 +76,20 @@ export const getBestGames = (
     return game;
   });
 
+  let spreadThreasold = 0;
+  switch (sport) {
+    case "basketball":
+      spreadThreasold = 7;
+      break;
+    case "soccer":
+      spreadThreasold = 0.5;
+      break;
+  }
+
   // return the games where there exists at least one bookmaker with a negative spread greater than the actual spread, and the absolute value of the negative spread is greater than 8
   return games.filter(
-    (game) => game.bookmakers.length > 0 && Math.abs(game.spread) > 7
+    (game) =>
+      game.bookmakers.length > 0 && Math.abs(game.spread) > spreadThreasold
   );
 };
 
