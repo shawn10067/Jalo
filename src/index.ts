@@ -26,8 +26,7 @@ const apiKey = process.env.API_KEY;
 
   // scrape masseyratings.com
   const todayGamesURL = "https://masseyratings.com/cb/ncaa-d1/games";
-  const tomorrowGamesURL = "https://masseyratings.com/cb/ncaa-d1/games?d=1";
-  await page.goto(tomorrowGamesURL);
+  await page.goto(todayGamesURL);
 
   // get the table
   const tableWithId = await page.$("#mytable0");
