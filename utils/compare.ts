@@ -34,7 +34,7 @@ export const findClosestMatch = (
 };
 
 // import the games.json file to test the function as a commonjs module
-const games = require("../games.json");
+const games = require("../sample-json/games.json");
 
 // test it with the demoBookArray
 export const demoGameArray: Array<GameWithOdds> = games.map((game: Game) => {
@@ -71,5 +71,6 @@ export const getBestGames = (
 };
 
 // test it with the demoGameArray
+// console.dir(demoGameArray, { depth: null });
+// console.log("*****************************");
 // console.dir(getBestGames(demoGameArray), { depth: null });
-// console.dir(demoGameArray.length, { depth: null });

@@ -138,7 +138,7 @@ export const bookify = (book: BookInput): Book => {
 };
 
 // import the books.json file to test the function as a commonjs module
-const books = require("../books.json");
+const books = require("../sample-json/books.json");
 
 export const demoBookArray: BookArray = books.map((book: BookInput) => {
   return bookify(book);

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "jalo": "ts-node index.ts",
+    "jalo": "ts-node ./src/index.ts",
     "book": "ts-node ./utils/book.ts",
     "compare": "ts-node ./utils/compare.ts"
   },

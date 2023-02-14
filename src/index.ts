@@ -1,9 +1,9 @@
 // utils imports
-import type { Book, BookArray, BookInput } from "./utils/book";
-import { bookify } from "./utils/book";
-import { Game, GameArray } from "./utils/game";
-const { gamify } = require("./utils/game");
-import { GameWithOdds, findClosestMatch, getBestGames } from "./utils/compare";
+import type { Book, BookArray, BookInput } from "../utils/book";
+import { bookify } from "../utils/book";
+import { Game, GameArray } from "../utils/game";
+const { gamify } = require("../utils/game");
+import { GameWithOdds, findClosestMatch, getBestGames } from "../utils/compare";
 const chalk = require("chalk");
 
 // api imports
