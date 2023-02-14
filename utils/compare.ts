@@ -30,6 +30,8 @@ export const findClosestMatch = (
   return {
     ...game,
     bookmakers: books[closestMatch.bestMatchIndex].bookmakers,
+    home: books[closestMatch.bestMatchIndex].homeTeam,
+    away: books[closestMatch.bestMatchIndex].awayTeam,
   };
 };
 
@@ -66,7 +68,7 @@ export const getBestGames = (
 
   // return the games where there exists at least one bookmaker with a negative spread greater than the actual spread, and the absolute value of the negative spread is greater than 8
   return games.filter(
-    (game) => game.bookmakers.length > 0 && Math.abs(game.spread) > 8
+    (game) => game.bookmakers.length > 0 && Math.abs(game.spread) > 7
   );
 };
 
