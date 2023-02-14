@@ -59,7 +59,7 @@ dayjs.extend(customParseFormat);
 
 // if the input is an empty array, return null
 const gamify = (arr: GameArray): Game | null => {
-  if (arr.length <= 9) {
+  if (arr.length <= 8) {
     return null;
   }
   // if the input is not an array, return null
@@ -73,6 +73,8 @@ const gamify = (arr: GameArray): Game | null => {
   }
 
   const gameTime = arr[0].split("\n")[1];
+  const isFinal = gameTime === "FINAL";
+
   const currentTime = new Date();
   const currentYear = currentTime.getFullYear();
   const currentMonth = currentTime.getMonth();
@@ -82,12 +84,12 @@ const gamify = (arr: GameArray): Game | null => {
     gameTime.split(".")[0]
   }${gameTime.split(".")[1]}`;
 
-  const gameDate = dayjs(convertedTime, "YYYY-M-Dh:mmA");
+  const gameDate = isFinal ? "FINAL" : dayjs(convertedTime, "YYYY-M-Dh:mmA");
 
   // if the input is an array, return the object
   const game = {
-    date: gameDate,
-    dateString: gameDate.format("MMMM D, h:mmA"),
+    date: isFinal ? currentTime : gameDate,
+    dateString: isFinal ? "FINAL" : gameDate.format("MMMM D, h:mmA"),
     home: arr[1].split("\n")[0],
     away: arr[1].split("\n")[1].split("@")[1].trim(),
     spread: parseFloat(arr[6]),
