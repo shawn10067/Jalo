@@ -12,7 +12,6 @@ const { gamify } = require("./utils/game");
   const page = await browser.newPage();
   await page.goto("https://masseyratings.com/cb/ncaa-d1/games");
   const tableWithId = await page.$("#mytable0");
-  await tableWithId.screenshot({ path: "example.png" });
   const allRowsFromTableWithId = await page.evaluate(() => {
     const rows = document.querySelectorAll("#mytable0 tr");
     return Array.from(rows, (row) => {
