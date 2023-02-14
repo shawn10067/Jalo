@@ -1,0 +1,660 @@
+[
+  {
+    "id": "f7df71af095aaf0cd43093d97e66a097",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-14T23:00:00Z",
+    "home_team": "Seton Hall Pirates",
+    "away_team": "Georgetown Hoyas",
+    "bookmakers": []
+  },
+  {
+    "id": "35c3fd6a2e4a55210835a4261718cc5a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-14T23:30:00Z",
+    "home_team": "South Carolina Gamecocks",
+    "away_team": "Vanderbilt Commodores",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              {
+                "name": "South Carolina Gamecocks",
+                "price": 1.83,
+                "point": 5.5
+              },
+              { "name": "Vanderbilt Commodores", "price": 1.98, "point": -5.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4358b1a8b762717efda0115652345ded",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Eastern Michigan Eagles",
+    "away_team": "Akron Zips",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Akron Zips", "price": 1.91, "point": -8.5 },
+              { "name": "Eastern Michigan Eagles", "price": 1.91, "point": 8.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "343082feecdbd338208688482bee1ad2",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Auburn Tigers",
+    "away_team": "Missouri Tigers",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Auburn Tigers", "price": 1.91, "point": -6.5 },
+              { "name": "Missouri Tigers", "price": 1.91, "point": 6.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d0c6c975edcfcb008c33aaf3f8279b28",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Ball State Cardinals",
+    "away_team": "Northern Illinois Huskies",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Ball State Cardinals", "price": 1.95, "point": -9.5 },
+              {
+                "name": "Northern Illinois Huskies",
+                "price": 1.87,
+                "point": 9.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "f37b22b831c384eb25f3eab40e5debb8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Bowling Green Falcons",
+    "away_team": "Central Michigan Chippewas",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Bowling Green Falcons", "price": 1.94, "point": -7.5 },
+              {
+                "name": "Central Michigan Chippewas",
+                "price": 1.88,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fa2c0e55d1ccb37672c8ac220e2ddc34",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Ohio Bobcats",
+    "away_team": "Buffalo Bulls",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Buffalo Bulls", "price": 1.98, "point": 4.5 },
+              { "name": "Ohio Bobcats", "price": 1.83, "point": -4.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3e82728b43fa3dfb6417a23dc44a2307",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Providence Friars",
+    "away_team": "Creighton Bluejays",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Creighton Bluejays", "price": 1.98, "point": -2.5 },
+              { "name": "Providence Friars", "price": 1.83, "point": 2.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "af90eefa06af17008001d102dab26d6b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Duke Blue Devils",
+    "away_team": "Notre Dame Fighting Irish",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Duke Blue Devils", "price": 1.83, "point": -11.5 },
+              {
+                "name": "Notre Dame Fighting Irish",
+                "price": 1.98,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2a2a8986528c3083fe6fceaa6a430beb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Penn State Nittany Lions",
+    "away_team": "Illinois Fighting Illini",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              {
+                "name": "Illinois Fighting Illini",
+                "price": 1.96,
+                "point": -3.5
+              },
+              {
+                "name": "Penn State Nittany Lions",
+                "price": 1.85,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9adb040244b4a4c4344a6f70e2823848",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Western Michigan Broncos",
+    "away_team": "Kent State Golden Flashes",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              {
+                "name": "Kent State Golden Flashes",
+                "price": 1.98,
+                "point": -11.5
+              },
+              {
+                "name": "Western Michigan Broncos",
+                "price": 1.83,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "796dd504f75b98c83296db1c4397eb00",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Massachusetts Minutemen",
+    "away_team": "Loyola (Chi) Ramblers",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Loyola (Chi) Ramblers", "price": 1.91, "point": 4.5 },
+              {
+                "name": "Massachusetts Minutemen",
+                "price": 1.91,
+                "point": -4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "025e489364fed330b4ea81cca7d7141a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Toledo Rockets",
+    "away_team": "Miami (OH) RedHawks",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Miami (OH) RedHawks", "price": 1.94, "point": 15.5 },
+              { "name": "Toledo Rockets", "price": 1.88, "point": -15.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e49ea5b0e44d94ac7d6a3e16931bac1e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Syracuse Orange",
+    "away_team": "NC State Wolfpack",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "NC State Wolfpack", "price": 1.91, "point": 0.5 },
+              { "name": "Syracuse Orange", "price": 1.91, "point": -0.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "318d26dd16ad5768e2f56e35616bdf90",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T00:00:00Z",
+    "home_team": "Valparaiso Beacons",
+    "away_team": "Southern Illinois Salukis",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              {
+                "name": "Southern Illinois Salukis",
+                "price": 1.98,
+                "point": -3.5
+              },
+              { "name": "Valparaiso Beacons", "price": 1.83, "point": 3.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3614b75452c637a551f4b4c659905473",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T01:00:00Z",
+    "home_team": "Villanova Wildcats",
+    "away_team": "Butler Bulldogs",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Butler Bulldogs", "price": 1.98, "point": 9.5 },
+              { "name": "Villanova Wildcats", "price": 1.83, "point": -9.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0d1b2ed1270ee4a5485aad132c297ac7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T01:00:00Z",
+    "home_team": "Rutgers Scarlet Knights",
+    "away_team": "Nebraska Cornhuskers",
+    "bookmakers": []
+  },
+  {
+    "id": "487bf5c63d9083af12e161f6f8ca192d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T01:30:00Z",
+    "home_team": "Georgia Bulldogs",
+    "away_team": "LSU Tigers",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Georgia Bulldogs", "price": 1.91, "point": -4.5 },
+              { "name": "LSU Tigers", "price": 1.91, "point": 4.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "16ccc7bfb9b32a5800e4916ba728751b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T02:00:00Z",
+    "home_team": "Utah State Aggies",
+    "away_team": "Air Force Falcons",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Air Force Falcons", "price": 1.88, "point": 13.5 },
+              { "name": "Utah State Aggies", "price": 1.94, "point": -13.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5cd9f2a831205b79fa987b4126d16fb6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T02:00:00Z",
+    "home_team": "Pittsburgh Panthers",
+    "away_team": "Boston College Eagles",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Boston College Eagles", "price": 1.98, "point": 8.5 },
+              { "name": "Pittsburgh Panthers", "price": 1.83, "point": -8.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "859a6c54e3c8d285734e03537d72b277",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T02:00:00Z",
+    "home_team": "DePaul Blue Demons",
+    "away_team": "St. John's Red Storm",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "DePaul Blue Demons", "price": 1.94, "point": 1.5 },
+              { "name": "St. John's Red Storm", "price": 1.88, "point": -1.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "574c269f74275d110d49b55078032e9c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T02:00:00Z",
+    "home_team": "Oklahoma St Cowboys",
+    "away_team": "Kansas Jayhawks",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Kansas Jayhawks", "price": 1.98, "point": -2.5 },
+              { "name": "Oklahoma St Cowboys", "price": 1.83, "point": 2.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a9698990a2dd35314fde6ebc09502ff3",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T02:00:00Z",
+    "home_team": "Oklahoma Sooners",
+    "away_team": "Kansas St Wildcats",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Kansas St Wildcats", "price": 1.96, "point": -1.5 },
+              { "name": "Oklahoma Sooners", "price": 1.85, "point": 1.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6fe9b97dbbd1cce29d31904370247fa7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T02:00:00Z",
+    "home_team": "Wisconsin Badgers",
+    "away_team": "Michigan Wolverines",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "Michigan Wolverines", "price": 1.91, "point": 1.5 },
+              { "name": "Wisconsin Badgers", "price": 1.91, "point": -1.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8b91ae2fb55d5d6b4b9f465208fd32fc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T03:00:00Z",
+    "home_team": "New Mexico Lobos",
+    "away_team": "Wyoming Cowboys",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "New Mexico Lobos", "price": 1.91, "point": -10.5 },
+              { "name": "Wyoming Cowboys", "price": 1.91, "point": 10.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5732c2160361f6feb395a983f6023261",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2023-02-15T03:00:00Z",
+    "home_team": "UNLV Rebels",
+    "away_team": "San José St Spartans",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2023-02-14T09:04:03Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2023-02-14T09:04:03Z",
+            "outcomes": [
+              { "name": "San José St Spartans", "price": 1.98, "point": 6.5 },
+              { "name": "UNLV Rebels", "price": 1.83, "point": -6.5 }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
