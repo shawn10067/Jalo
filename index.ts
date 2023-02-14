@@ -1,8 +1,10 @@
 import { Game, GameArray } from "./utils/game";
-
 const puppeteer = require("puppeteer-core");
 const axios = require("axios");
 const { gamify } = require("./utils/game");
+require("dotenv").config();
+
+const apiKey = process.env.API_KEY;
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -29,9 +31,14 @@ const { gamify } = require("./utils/game");
     }
   });
 
-  const gamesLeft = gamesToday.filter((game) => game.dateString !== "FINAL");
+  // const url = `https://api.sportsdata.io/v3/ncaafb/scores/json/GamesByDate/2020-11-07?key=${apiKey}`;
+  const oddsApi = `https://api.the-odds-api.com/v4/sports?apiKey=${apiKey}`;
 
+  const gamesLeft = gamesToday.filter((game) => game.dateString !== "FINAL");
   console.log(gamesLeft);
+
+  const resp = await axios.get();
+  console.log(resp.data);
 
   await browser.close();
 })();
