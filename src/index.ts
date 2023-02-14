@@ -7,7 +7,6 @@ import { GameWithOdds, findClosestMatch, getBestGames } from "../utils/compare";
 import { sports } from "./sports";
 import { stringify } from "../utils/stringify";
 const chalk = require("chalk");
-const chalkAnimation = require("chalk-animation");
 
 // api imports
 const puppeteer = require("puppeteer-core");
