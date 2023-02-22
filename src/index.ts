@@ -1,11 +1,10 @@
 // utils imports
-import type { BookArray } from "../utils/book";
-import { Game, GameArray } from "../utils/game";
 import { GameWithOdds, findClosestMatch, getBestGames } from "../utils/compare";
 import { sports } from "./sports";
 import { stringify } from "../utils/stringify";
 import { getGenericTheOdds } from "../utils/genericTheOdds";
 import { getGenericMassey } from "../utils/genericMassey";
+import { sportsOptionsSettings } from "./sportsOptions";
 const chalk = require("chalk");
 
 // config imports
@@ -15,46 +14,6 @@ require("dotenv").config();
 const apiKey = process.env.API_KEY;
 
 export type sportTypes = "basketball" | "soccer";
-
-const sportsOptionsSettings: {
-  [key: string]: {
-    enabled: boolean;
-    sport: sportTypes;
-  };
-} = {
-  ncaab: {
-    enabled: true,
-    sport: "basketball",
-  },
-  nba: {
-    enabled: true,
-    sport: "basketball",
-  },
-  mexicoSoccer: {
-    enabled: true,
-    sport: "soccer",
-  },
-  italySoccer: {
-    enabled: true,
-    sport: "soccer",
-  },
-  germanySoccer: {
-    enabled: true,
-    sport: "soccer",
-  },
-  spainSoccer: {
-    enabled: true,
-    sport: "soccer",
-  },
-  franceSoccer: {
-    enabled: true,
-    sport: "soccer",
-  },
-  englandSoccer: {
-    enabled: true,
-    sport: "soccer",
-  },
-};
 
 // the function 'crunchSports' that, for each sport that is true in the sportsOptionsSettings object, get the best games and print them to the console
 const crunchSports = async () => {
