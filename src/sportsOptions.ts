@@ -12,39 +12,39 @@ export const sportsOptionsSettings: {
   };
 } = {
   nba: {
-    enabled: false || generalOptions.baseketball,
+    enabled: generalOptions.baseketball && true,
     sport: "basketball",
   },
   ncaab: {
-    enabled: false || generalOptions.baseketball,
+    enabled: generalOptions.baseketball && true,
     sport: "basketball",
   },
   europeBasketball: {
-    enabled: false || generalOptions.baseketball,
+    enabled: generalOptions.baseketball && true,
     sport: "basketball",
   },
   mexicoSoccer: {
-    enabled: false || generalOptions.soccer,
+    enabled: generalOptions.soccer && true,
     sport: "soccer",
   },
   italySoccer: {
-    enabled: false || generalOptions.soccer,
+    enabled: generalOptions.soccer && true,
     sport: "soccer",
   },
   germanySoccer: {
-    enabled: false || generalOptions.soccer,
+    enabled: generalOptions.soccer && true,
     sport: "soccer",
   },
   spainSoccer: {
-    enabled: false || generalOptions.soccer,
+    enabled: generalOptions.soccer && true,
     sport: "soccer",
   },
   franceSoccer: {
-    enabled: false || generalOptions.soccer,
+    enabled: generalOptions.soccer && true,
     sport: "soccer",
   },
   englandSoccer: {
-    enabled: false || generalOptions.soccer,
+    enabled: generalOptions.soccer && true,
     sport: "soccer",
   },
 };

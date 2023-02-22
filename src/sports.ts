@@ -46,4 +46,8 @@ export const sports = {
     gamesLink: ["https://masseyratings.com/dls/england-premier-league/games"],
     oddsSportID: "soccer_epl",
   },
+  mlsSoccer: {
+    gamesLink: ["https://masseyratings.com/mls/games"],
+    oddsSportID: "soccer_usa_mls",
+  },
 };
