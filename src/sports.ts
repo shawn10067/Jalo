@@ -1,10 +1,3 @@
-import axios from "axios";
-import { bookify } from "../utils/book";
-import { Game, GameArray, gamify } from "../utils/game";
-import puppeteer from "puppeteer-core";
-import { getGenericMassey } from "../utils/genericMassey";
-import { getGenericTheOdds } from "../utils/genericTheOdds";
-
 export const sports = {
   nba: {
     gamesLink: ["https://masseyratings.com/nba/games"],

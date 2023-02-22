@@ -1,5 +1,5 @@
 import { sportTypes } from "../src";
-import { Book, BookArray, demoBookArray } from "./book";
+import { BookArray, demoBookArray } from "./book";
 import type { Game } from "./game";
 
 const stringSimilarity = require("string-similarity");
