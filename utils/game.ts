@@ -81,8 +81,8 @@ export const gamify = (arr: GameArray): Game | null => {
   const currentMonth = currentTime.getMonth();
 
   const convertedTime = `${currentYear}-${currentMonth + 1}-${gameDay}${
-    gameTime.split(".")[0]
-  }${gameTime.split(".")[1]}`;
+    gameTime?.split(".")[0]
+  }${gameTime?.split(".")[1]}`;
 
   const gameDate = isFinal ? "FINAL" : dayjs(convertedTime, "YYYY-M-Dh:mmA");
 

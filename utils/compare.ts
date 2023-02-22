@@ -79,7 +79,7 @@ export const getBestGames = (
   let SPREAD_ABS_THRESHOLD = 0;
   switch (sport) {
     case "basketball":
-      SPREAD_ABS_THRESHOLD = 7;
+      SPREAD_ABS_THRESHOLD = 6;
       break;
     case "soccer":
       SPREAD_ABS_THRESHOLD = 0.5;
